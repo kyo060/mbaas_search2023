@@ -58,7 +58,7 @@
 
         function showResults(results) {
             // テーブルのヘッダを生成
-            let msg = "<table><tr><th>name</th><th>Lvl</th><th>luck</th><th>luckskill</th><th>Fruit</th></tr>";
+            let msg = "<table><tr><th>name</th><th>Lvl</th><th>luck</th><th>luckskill</th><th>Fruit</th><th>get</th></tr>";
             for (let i = 0; i < results.length; i++) {
                 // 各データを収めた表の列を生成
                 msg += "<tr>";
@@ -67,6 +67,7 @@
                 msg += "<td class='num'>" + results[i].luck + "</td>";
                 msg += "<td class='num'>" + results[i].luckskill + "</td>";
                 msg += "<td class='num'>" + results[i].Fruit + "</td>";
+                msg += "<td class='num'>" + results[i].get + "</td>";
                 msg += "</tr>";
             }
             // テーブルのテイラを生成
