@@ -51,7 +51,7 @@
         function searchLuckskill() {
             let luckskill = $("#luckskill").val();
             let TestDataClass = ncmb.DataStore(db);
-            TestDataClass.equalTo("luckskill", luckskill).fetchAll().then(function(results) {
+            TestDataClass.regularExpressionTo("luckskill", luckskill).fetchAll().then(function(results) {
                 showResults(results);
             })
         }
