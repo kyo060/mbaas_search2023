@@ -59,7 +59,7 @@
         function searchFruit() {
             let Fruit = $("#Fruit").val();
             let TestDataClass = ncmb.DataStore(db);
-            TestDataClass.equalTo("Fruit", Fruit).fetchAll().then(function(results) {
+            TestDataClass.regularExpressionTo("Fruit", Fruit).fetchAll().then(function(results) {
                 showResults(results);
             })
         }
