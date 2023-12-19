@@ -48,10 +48,10 @@
             })
         }
 
-        function searchLevelGT() {
-            let level = parseInt($("#level").val());
+        function searchLuckskill() {
+            let luckskill = $("#luckskill").val();
             let TestDataClass = ncmb.DataStore(db);
-            TestDataClass.freaterThan("level", level).fetchAll().then(function(results) {
+            TestDataClass.equalTo("luckskill", luckskill).fetchAll().then(function(results) {
                 showResults(results);
             })
         }
